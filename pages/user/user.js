@@ -5,13 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:{
-      nickName:""
-    }
+    userInfo:{}
   },
-  // 获取用户信息
-  getUserInfo:function(e){
-    console.log(e)
+  getUserInfoFunc: function (e) {
+    console.log(e);
+    // 1. 获取用户信息
+    let userInfo = e.detail.userInfo;
+    this.setData({  
+      userInfo:userInfo
+    })
+    // 2. 存到缓存区
+    wx.setStorageSync("userInfo", userInfo)
   },
   /**
    * 生命周期函数--监听页面加载
@@ -31,10 +35,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // 获取本地缓存数据
-    let userInfo = wx.getStorageSync('userInfo');
+    let userInfo = wx.getStorageSync("userInfo");
     this.setData({
-      
+      userInfo
     })
   },
 

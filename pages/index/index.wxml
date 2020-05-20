@@ -8,19 +8,20 @@
     </view>
   <!-- 搜索框结束 -->
   <!-- 轮播图开始 -->
-  <view class="apt-swiper">
-    <swiper 
-    indicator-dots="true"
-    indicator-color="black"
-    indicator-active-color="white"
-    interval="3000"
-    autoplay="true"
-    >
-      <swiper-item wx:for="{{ swiper_list }}" wx:key="good_id"> 
-        <image src="{{ item.image_src }}"></image>
-      </swiper-item>
-    </swiper>
-  </view>
+    <view class="apt-swiper">
+        <swiper 
+        indicator-dots="true"
+        indicator-color="black"
+        indicator-active-color="white"
+        interval="3000"
+        autoplay="true"
+        circular="true"
+        >
+          <swiper-item wx:for="{{ swiper_list }}" wx:key="good_id"> 
+            <image src="{{ item.image_src }}"></image>
+          </swiper-item>
+      </swiper>
+    </view>
   <!-- 轮播图结束 -->
   <!-- 导航图标开始 -->
     <view class="apt-navs"> 
@@ -37,16 +38,13 @@
           {{ item.floor_title.name }}
         </view>
         <view class="product-image-list">
-          <view class="product-image-list-item"
-          wx:for="{{ item.product_list }}"
-          wx:for-item
-          >
+          <view class="product-image-list-item" wx:for="{{ item.product_list }}" wx:key="image_src" > 
+            <image src="{{ item.image_src }}"></image>
+          </view>
         
-        </view>
-          {{  }}
-        </view>
       </view>
     </view>
+  </view>
   </view>
   <!-- 底部涂层结束 -->
 </view>

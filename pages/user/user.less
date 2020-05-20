@@ -13,17 +13,16 @@ view.apt-user {
      }
      view.apt-user-bg {
          height: 400rpx;
-        //  filter: blur(5rpx);//模糊
+         filter: blur(20rpx);//模糊
         image{
             border-radius: 50%;
         }
       }
-      
       view.imageWrapper {
           height: 150px;
           width: 150px;
           position: absolute;
-          top: 100rpx;
+          top: 80rpx;
           left: 50%;
           transform: translateX(-50%);
         image {
@@ -33,9 +32,10 @@ view.apt-user {
       
       view.nickName {
         position: absolute;
-        top: 100rpx;
-        left: 50%;
-        transform: translateX(-50%);
+            top:95%;
+            left:50%;
+            transform: translateX(-50%);
+            color:white;
       }
     }
     view.apt-user-orderFunc {
@@ -53,12 +53,13 @@ view.apt-user {
           }
     }
     view.apt-user-systemFunc {
+      height: 100%;
         view.apt-user-systemFunc {
             height: 100rpx;
             border-bottom: 1px solid pink;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: space-between;
             padding: 10rpx;
           view.left {
              display: flex;
@@ -71,16 +72,16 @@ view.apt-user {
             }
           }
       
-          view.right {
+          // view.right {
               
-            view.iconfont {
+          //   view.iconfont {
       
-            }
+          //   }
       
-            view.text {
+          //   view.text {
       
-            }
-          }
+          //   }
+          // }
         }
       }
         

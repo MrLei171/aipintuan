@@ -15,6 +15,7 @@ view.apt-user view.apt-user-profile button {
 }
 view.apt-user view.apt-user-profile view.apt-user-bg {
   height: 400rpx;
+  filter: blur(20rpx);
 }
 view.apt-user view.apt-user-profile view.apt-user-bg image {
   border-radius: 50%;
@@ -23,7 +24,7 @@ view.apt-user view.apt-user-profile view.imageWrapper {
   height: 150px;
   width: 150px;
   position: absolute;
-  top: 100rpx;
+  top: 80rpx;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -32,9 +33,10 @@ view.apt-user view.apt-user-profile view.imageWrapper image {
 }
 view.apt-user view.apt-user-profile view.nickName {
   position: absolute;
-  top: 100rpx;
+  top: 95%;
   left: 50%;
   transform: translateX(-50%);
+  color: white;
 }
 view.apt-user view.apt-user-orderFunc {
   height: 150rpx;
@@ -50,12 +52,15 @@ view.apt-user view.apt-user-orderFunc view.apt-user-orderFunc-item {
 view.apt-user view.apt-user-orderFunc .iconfont {
   font-size: 50rpx;
 }
+view.apt-user view.apt-user-systemFunc {
+  height: 100%;
+}
 view.apt-user view.apt-user-systemFunc view.apt-user-systemFunc {
   height: 100rpx;
   border-bottom: 1px solid pink;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   padding: 10rpx;
 }
 view.apt-user view.apt-user-systemFunc view.apt-user-systemFunc view.left {
